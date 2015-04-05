@@ -16,39 +16,49 @@
 </head>
 <body ng-controller="MainController" ng-cloak>
 
-
   <ul>
     <li ng-repeat="film in films">
-    {{film.title}} ({{film.year}})
+      {{film.title}} ({{film.year}})
     </li>
   </ul>  
-<br/>
+  <br/>
 
   <ul>
     <li ng-repeat="studio in studios">
-    {{studio.name}} ({{studio.town}})
+      {{studio.name}} ({{studio.town}})
     </li>
   </ul>
 
 
   <script>
     function init() {
-      gapideferred();
-}
-</script>
+      var conf = {
+        'appName':'theApp',
+        'defaultRoot':'https://1-dot-cinemaendpoint.appspot.com/_ah/api',
+        'defaultVersion':'v1',
+        'endpoints': [
+        {'endpointname':'filmendpoint','injectionname':'filmproxy'},
+        {'endpointname':'studioendpoint','injectionname':'studioproxy'},
+        {'endpointname':'actorendpoint','injectionname':'actorproxy'},
+        ]};
 
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-deferred-bootstrap/angular-deferred-bootstrap.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
 
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=init"></script> 
-<script src="scripts/GAPIDeferred.js"></script>
+        gapangular.bootstrap(conf);
+      }
+    </script>
 
-<!-- endbuild -->
-</body>
-</html>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-deferred-bootstrap/angular-deferred-bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script> 
+    <script src="scripts/gapangular.js"></script>
+
+    <!-- endbuild -->
+  </body>
+  </html>
