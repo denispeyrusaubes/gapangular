@@ -8,26 +8,20 @@
  *
  * Main module of the application.
  */
-angular
-  .module('endpointsApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+ var theApp = angular
+ .module('theApp', []);
+
+ theApp.controller('MainController', function($scope,studioproxy,filmproxy) {
+  $scope.greeting = 'Bonjour !';
+  $scope.films = [];
+  $scope.studios = [];
+  
+  filmproxy.listFilm().execute(function(resp){
+    $scope.$apply(function () {$scope.films = resp.items; });
+  } );      
+
+  studioproxy.listStudio().execute(function(resp){
+    $scope.$apply(function () {$scope.studios = resp.items; });
+  } );}
+
+  );
