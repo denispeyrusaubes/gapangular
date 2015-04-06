@@ -93,6 +93,22 @@ gapi.client.load('your_api_name', 'v1', undefined, ROOT).then(
 __injectionname__ must be supplied. It corresponds to the name of the component you can
 inject in your different angular's module.
 
+```javascript
+theApp.controller('MainController', function($scope,studioproxy,filmproxy) {
+  $scope.films = [];
+  $scope.studios = [];
+  
+  filmproxy.listFilm().execute(function(resp){
+    $scope.$apply(function () {$scope.films = resp.items; });
+  } );      
+
+  studioproxy.listStudio().execute(function(resp){
+    $scope.$apply(function () {$scope.studios = resp.items; });
+  } );}
+
+  );
+```
+
 
 
 
