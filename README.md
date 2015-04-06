@@ -116,13 +116,12 @@ theApp.controller('MainController', function($scope,studioproxy,filmproxy) {
   studioproxy.listStudio().execute(function(resp){
     $scope.$apply(function () {$scope.studios = resp.items; });
   } );}
-
   );
 ```
 
 ## Demos
 
-`cd demos/Cinema & grunt serve` for preview.
+`cd demos/Cinema & grunt serve`
 
 ## Links
 [Angular-deferred-bootstrap](https://github.com/philippd/angular-deferred-bootstrap)
