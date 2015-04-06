@@ -11,6 +11,24 @@ You can both deploy it as a local web server or to GAE.
 ``
 mvn appengine:devserver
 ``
+[Admin](http://localhost:8080/_ah/admin)
+[API Explorer](http://localhost:8080/_ah/api/explorer)
+
+Here is the configuration for gapangular (in _CinemaClient/app/index.html_)
+
+```javascript
+var conf = {
+        'appName':'theApp',
+        'defaultRoot':' http://localhost:8080/_ah/api',
+        //'defaultRoot':'https://1-dot-cinemaendpoint.appspot.com/_ah/api',
+        'defaultVersion':'v1',
+        'endpoints': [
+        {'endpointname':'filmendpoint','injectionname':'filmproxy'},
+        {'endpointname':'studioendpoint','injectionname':'studioproxy'},
+        {'endpointname':'actorendpoint','injectionname':'actorproxy'}
+        ]};
+``
+
 
 ## Deploy to Google App Engine
 
