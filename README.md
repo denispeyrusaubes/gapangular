@@ -12,7 +12,7 @@ This library helps you to correctly bootstrap Google Client and AngularJS. Once 
 
 index.html must declare:
 
-```
+```html
 	<script>    
 	function init() {
       var conf = {
