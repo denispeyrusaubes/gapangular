@@ -1,7 +1,10 @@
 # endpoints
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+[Google Endpoint](https://cloud.google.com/appengine/docs/java/endpoints')
+[AngularJS](https://angularjs.org)
+
+This library helps you to correctly initialize Google Client library to be used
+from AngularJS. Once your endpoints correctly initialized, you can inject them in your different AngularJS's components (i.e. controller)
 
 ## Build & development
 
