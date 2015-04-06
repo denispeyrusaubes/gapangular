@@ -11,7 +11,9 @@ You can both deploy it as a local web server or to GAE.
 ``
 mvn appengine:devserver
 ``
+
 [Admin](http://localhost:8080/_ah/admin)
+
 [API Explorer](http://localhost:8080/_ah/api/explorer)
 
 Here is the configuration for gapangular (in _CinemaClient/app/index.html_)
