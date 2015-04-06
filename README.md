@@ -7,6 +7,7 @@ This library relies on Philipp Denzler's one: [angular-deferred-bootstrap](https
 - [Install](#user-content-install)
 - [Configuration](#user-content-configuration)
 - [Demos](#user-content-demos)
+- [Links](#user-content-links)
 - [License](#user-content-license)
 
 
