@@ -1,4 +1,4 @@
-# endpoints
+# GAPIAngular 
 
 This library helps you to correctly bootstrap Google Client and AngularJS. Once your endpoints are correctly initialized, you can inject them in your differents AngularJS's components (i.e. controllers).
 
