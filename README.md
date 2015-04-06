@@ -65,14 +65,14 @@ example of _endpoints_ value:
 ]
 ```
 
-These values are completed with _defaultRoot_ and _defaultVersion_ previously described.
-
+These values are completed with the _defaultRoot_ and _defaultVersion_ previously described.
 If default values are not correct for one endpoint entry, you can overide them using:
 
 ```javascript
 [
-	// ...,
-	{'endpointname':'studioendpoint','injectionname':'studioproxy','version':'v2','root':'myroot'},
+	// ...
+	{'endpointname':'studioendpoint','injectionname':'studioproxy',
+		'version':'v2','root':'myroot'},
     // ...
 ]
 ```
