@@ -1,0 +1,195 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://cinemaendpoint.appspot.com/_ah/api",
+  "name" : "studioendpoint",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://cinemaendpoint.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "ownerDomain" : "dp.com",
+  "ownerName" : "dp.com",
+  "packagePath" : "cinema.entity",
+  "methods" : {
+    "studioendpoint.removeStudio" : {
+      "path" : "studio/{id}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.it46.service.StudioEndpoint.removeStudio",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "studioendpoint.listStudio" : {
+      "path" : "studio",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.it46.service.StudioEndpoint.listStudio",
+      "request" : {
+        "parameters" : {
+          "cursor" : {
+            "type" : "string",
+            "required" : false
+          },
+          "limit" : {
+            "type" : "int32",
+            "required" : false
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "studioendpoint.getStudio" : {
+      "path" : "studio/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.it46.service.StudioEndpoint.getStudio",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int64",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "studioendpoint.updateStudio" : {
+      "path" : "studio",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.it46.service.StudioEndpoint.updateStudio",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "studioendpoint.insertStudio" : {
+      "path" : "studio",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.it46.service.StudioEndpoint.insertStudio",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "CollectionResponse_Studio" : {
+        "id" : "CollectionResponse_Studio",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Studio"
+            }
+          },
+          "nextPageToken" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Studio" : {
+        "id" : "Studio",
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "town" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.it46.service.StudioEndpoint.removeStudio" : {
+      },
+      "com.it46.service.StudioEndpoint.listStudio" : {
+        "response" : {
+          "$ref" : "CollectionResponse_Studio"
+        }
+      },
+      "com.it46.service.StudioEndpoint.getStudio" : {
+        "response" : {
+          "$ref" : "Studio"
+        }
+      },
+      "com.it46.service.StudioEndpoint.updateStudio" : {
+        "request" : {
+          "$ref" : "Studio"
+        },
+        "response" : {
+          "$ref" : "Studio"
+        }
+      },
+      "com.it46.service.StudioEndpoint.insertStudio" : {
+        "request" : {
+          "$ref" : "Studio"
+        },
+        "response" : {
+          "$ref" : "Studio"
+        }
+      }
+    }
+  }
+}
