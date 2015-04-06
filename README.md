@@ -27,7 +27,7 @@ where:
 * _onload=init_ refers to the previously _init()_ declared function. This function 
 will be run after the _client.js_ once the _client.js_ library has finished loading.
 
-__Bootstraping your angularJS application is manual. Do not use any ng-app directive__ !
+_Bootstraping your angularJS application is manual. Do not use any ng-app directive_ !
 
 
 ```javascript
