@@ -4,10 +4,19 @@ This library helps you to correctly bootstrap Google Client and AngularJS. Once 
 
 This library relies on Philipp Denzler's one: [angular-deferred-bootstrap](https://github.com/philippd/angular-deferred-bootstrap)
 
-## Installation
+- [Install](#user-content-install)
+- [Configuration](#user-content-configuration)
+- [Demos](#user-content-demos)
+- [License](#user-content-license)
+
+
+
+## Install
+
+#### [Bower](http://bower.io)
 
 ```
-bower install gapangular --save
+bower install --save gapangular
 ```
 
 ## Configuration
@@ -115,12 +124,9 @@ theApp.controller('MainController', function($scope,studioproxy,filmproxy) {
   );
 ```
 
+## Demos
 
-
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
+`cd demos/Cinema & grunt serve` for preview.
 
 ## Links
 [Angular-deferred-bootstrap](https://github.com/philippd/angular-deferred-bootstrap)
@@ -128,4 +134,9 @@ Run `grunt` for building and `grunt serve` for preview.
 [Google Endpoint](https://cloud.google.com/appengine/docs/java/endpoints')
 
 [AngularJS](https://angularjs.org)
+
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT) © Denis peyrusaubes
 
