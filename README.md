@@ -24,9 +24,11 @@ index.html must declare:
         	{'endpointname':'endpoint2','injectionname':'endpoint2proxy'}
         ]};
 
-
         gapangular.bootstrap(conf);
-      }</script>
+      }
+
+    </script>
+    <script src="path_to/angular.js"></script>
     <script src="path_to/angular-deferred-bootstrap.js"></script>
     <script src="scripts/app.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script> 
