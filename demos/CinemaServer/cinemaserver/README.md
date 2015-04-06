@@ -6,6 +6,9 @@ The cinema server implementation for Google App Engine.
 You can both deploy it as a local web server or to GAE.
 
 ## [Local deployment](https://cloud.google.com/appengine/docs/java/tools/maven#testing_your_app_with_the_development_server)
+``
+mvn appengine:devserver
+``
 
 ## Deploy to Google App Engine
 
