@@ -24,8 +24,8 @@ index.html must declare:
 
 where: 
 * app.js is your angularJS's main conf file
-* _onload=init_ refers to the previously _init()_ declared method. This method 
-will be run after the _client.js_ library download
+* _onload=init_ refers to the previously _init()_ declared function. This function 
+will be run after the _client.js_ once the _client.js_ library has finished loading.
 * 
 
 ```javascript
@@ -42,6 +42,19 @@ will be run after the _client.js_ library download
         gapangular.bootstrap(conf);
     }
 ```
+
+Bootstraping your angularJS application is manual. __Do not use any ng-app directive__ !
+
+In order to initialise both AngularJS and your google endpoints services. You may pass a _conf_ object that contains differet fields:
+
+| Field         | Detail                     | From           | DefaultValue  |
+| ------------- |:--------------------------:|:--------------:| -------------:|
+| appName       | AngularJS application name | none 	   	  |	-			  |
+| defaultRoot   | RootURL to access to your endpoint      |   Google End Point		| - |
+| defaultVersion| default version of your endpoint   |    Google End Point 		| v1 |
+| endPoints		| detail for your endpoints  |    Google End Point 		| - |
+
+
 
 
 ## Build & development
