@@ -1,22 +1,20 @@
 Cinema Server
-(c) Denis Peyrusaubes
 =============================================
 
 The cinema server implementation for Google App Engine.
 
-You can both deploy it as a local web server using
+You can both deploy it as a local web server or to GAE.
 
-[Deploy to local](https://cloud.google.com/appengine/docs/java/tools/maven#testing_your_app_with_the_development_server)
+## [Local deployment](https://cloud.google.com/appengine/docs/java/tools/maven#testing_your_app_with_the_development_server)
 
+## Deploy to Google App Engine
 
+* Login to your Google developers Console
+* Create an appId (_cinemaendpoint_ for example)
+* Modify the WEB-INF/appengine-web.xml to match the previously created appId
 
-
-or you can deploy to the Google App Engine (you must have an account for that):
-* Loggin to your Google developers Console
-* Create an appId (_cinemaserver_ for example)
-* Modify the WEB-INF/appengine-web.xml to match the appId
-
-'''
+``
 mvn appengine:update
-'''
+``
 
+the url for your app is: http://appid.appspot.com/_ah/api#p/filmendpoint/v1/
