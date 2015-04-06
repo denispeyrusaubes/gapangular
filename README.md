@@ -4,6 +4,12 @@ This library helps you to correctly bootstrap Google Client and AngularJS. Once 
 
 This library relies on Philipp Denzler's one: [angular-deferred-bootstrap](https://github.com/philippd/angular-deferred-bootstrap)
 
+## Installation
+
+```
+bower install gapangular --save
+```
+
 ## Configuration
 
 index.html must declare:
