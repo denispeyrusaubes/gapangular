@@ -4,7 +4,7 @@
         <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
         <init-param>
             <param-name>services</param-name>
-            <param-value>com.it46.service.ActorEndpoint,com.it46.service.FilmEndpoint,com.it46.service.StudioEndpoint</param-value>
+            <param-value>com.it46.service.ActorEndpoint,com.it46.service.StudioEndpoint</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

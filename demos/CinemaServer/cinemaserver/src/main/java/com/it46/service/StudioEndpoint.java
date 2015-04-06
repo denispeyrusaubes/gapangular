@@ -156,7 +156,7 @@ public class StudioEndpoint {
 		}
 		return contains;
 	}
-
+ 
 	private static EntityManager getEntityManager() {
 		return EMF.get().createEntityManager();
 	}
