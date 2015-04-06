@@ -21,20 +21,14 @@ bower install --save gapangular
 
 ## Configuration
 
-index.html must declare:
+#### Download all needed libraries
 
 ```html
-	<script>    
-	function init() {
-		// Describe later
-    }
-    </script>
-    <script src="path_to/angular.js"></script>
+	  <script src="path_to/angular.js"></script>
     <script src="path_to/angular-deferred-bootstrap.js"></script>
     <script src="scripts/app.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=init"></script> 
     <script src="path_to/gapangular.js"></script>
-
 ```
 
 where: 
@@ -42,6 +36,10 @@ where:
 * _onload=init_ refers to the previously _init()_ declared function. This function 
 will be run after the _client.js_ once the _client.js_ library has finished loading.
 
+__Caution:__ Do not use _ng-app_ angular's directive ! Angular's bootstrap will
+be done manually !
+
+#### Bootstrap both AngularJS and your Google Endpoints
 
 ```javascript
 	function init() {
@@ -57,8 +55,6 @@ will be run after the _client.js_ once the _client.js_ library has finished load
         gapangular.bootstrap(conf);
     }
 ```
-
-Bootstraping your angularJS application is manual. __Do not use any ng-app directive__ !
 
 In order to initialise both AngularJS and your Google endpoints services. You must pass a _conf_ object that contains differents fields:
 
@@ -92,7 +88,7 @@ If default values are not correct for one endpoint entry, you can overide them u
 ]
 ```
 
-Equivalent code (before gapangular exists):
+Equivalent code (before gapangular exists ;) :
 
 ```javascript
 var ROOT = 'https://your_app_id.appspot.com/_ah/api';
