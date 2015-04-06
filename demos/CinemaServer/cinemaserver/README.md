@@ -22,4 +22,3 @@ mvn appengine:devserver
 mvn appengine:update
 ``
 
-the url for your app is: http://appid.appspot.com/_ah/api#p/filmendpoint/v1/
