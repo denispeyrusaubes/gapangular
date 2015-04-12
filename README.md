@@ -1,6 +1,6 @@
 # GAPAngular
 
-[english](./README-en.html)
+[english](https://github.com/denispeyrusaubes/gapangular/blob/master/README-en.md)
 
 GapAnpular est une librairie utilitaire en javascript.
 Elle facilite la tâche aux développeurs _AngularJS_ souhaitant accéder 
